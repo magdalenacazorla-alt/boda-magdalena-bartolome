@@ -1,0 +1,23 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Magdalena & Bartolomé · 30.10.2027</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;background:#f7f2e9}.page{position:relative;width:min(100vw,862px);margin:auto;line-height:0}.model{width:100%;display:block}.hot{position:absolute;border:0;background:transparent;cursor:pointer}
+.history{left:2%;top:17.2%;width:11%;height:4.2%}.count{left:15%;top:17.2%;width:11%;height:4.2%}.ceremony{left:28%;top:17.2%;width:11%;height:4.2%}.celebration{left:41%;top:17.2%;width:11%;height:4.2%}.where{left:54%;top:17.2%;width:11%;height:4.2%}.rsvp{left:67%;top:17.2%;width:11%;height:4.2%}.music{left:80%;top:17.2%;width:11%;height:4.2%}.map{left:56%;top:67.7%;width:20%;height:3.2%}.form{left:18%;top:79.7%;width:63%;height:4.2%}.musicbtn{left:13%;top:91.8%;width:12%;height:4.5%}
+.overlay{position:fixed;inset:0;background:#0008;display:none;align-items:flex-end;z-index:20}.overlay.show{display:flex}.sheet{width:min(720px,100%);height:min(88svh,780px);margin:auto auto 0;background:#fffaf2;border-radius:25px 25px 0 0;overflow:hidden;box-shadow:0 -10px 40px #0004}.bar{height:55px;display:flex;align-items:center;justify-content:space-between;padding:0 17px;border-bottom:1px solid #ded3c2;color:#59644b;font-family:Georgia,serif}.close{border:0;background:none;font-size:28px;color:#777}iframe{width:100%;height:calc(100% - 55px);border:0}
+.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:#59644b;color:#fff;padding:11px 16px;border-radius:999px;font:13px Arial;display:none;z-index:30}.toast.show{display:block}
+</style></head><body>
+<main class="page"><img class="model" src="modelo.png" alt="Invitación de boda">
+<button class="hot history" onclick="show('Nuestra historia · Sevilla, 2016 · nuestros viajes y nuestros dos hijos ❤️')"></button>
+<button class="hot count" onclick="count()"></button>
+<button class="hot ceremony" onclick="show('Ceremonia · 13:00 h · Parroquia Santa Catalina · Pl. Iglesia, 9, Pozoblanco')"></button>
+<button class="hot celebration" onclick="show('Celebración · 14:00 h · Catering Calablanca · Entrada al salón: “El Tío de las Pelotas” · C. Cronista Sepúlveda, 7')"></button>
+<button class="hot where" onclick="map()"></button><button class="hot map" onclick="map()"></button>
+<button class="hot rsvp" onclick="openForm()"></button><button class="hot form" onclick="openForm()"></button>
+<button class="hot music" onclick="music()"></button><button class="hot musicbtn" onclick="music()"></button></main>
+<div class="overlay" id="ov" onclick="if(event.target===this)closeForm()"><div class="sheet"><div class="bar"><span>Magdalena & Bartolomé · Confirmación</span><button class="close" onclick="closeForm()">×</button></div><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezatcEja2CcOIFN9_i3sMrSfBncHwaiElb7RoRsyf85n1b3g/viewform?usp=dialog" title="Confirmación de asistencia"></iframe></div></div>
+<div class="toast" id="toast"></div>
+<script>
+function openForm(){document.getElementById('ov').classList.add('show')}function closeForm(){document.getElementById('ov').classList.remove('show')}
+function map(){window.open("https://www.google.com/maps/search/?api=1&query=C.%20Cronista%20Sep%C3%BAlveda%207%2C%2014400%20Pozoblanco%2C%20C%C3%B3rdoba","_blank")}function music(){window.open("https://open.spotify.com/search/Experience%20Ludovico%20Einaudi","_blank")}
+function show(t){let x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),4200)}
+function count(){let d=Math.max(0,new Date("2027-10-30T13:00:00+02:00")-Date.now());show("Faltan "+Math.floor(d/86400000)+" días para nuestro gran día ❤️")}
+</script></body></html>
