@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7f3ea">
+<title>Magdalena & Bartolomé · 30 de octubre de 2027</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#f7f3ea}
+.page{position:relative;width:100%;max-width:852px;margin:0 auto}
+.base{display:block;width:100%;height:auto}
+.countdown{
+ position:absolute;left:13.73%;top:56.31%;width:72.54%;
+ display:grid;grid-template-columns:repeat(4,1fr);gap:2.05%;
+ z-index:5;pointer-events:none;
+}
+.box{
+ border:1px solid #ded5c4;border-radius:15px;background:#fbf8f1;
+ aspect-ratio:1.18/1;display:flex;flex-direction:column;
+ align-items:center;justify-content:center;color:#3f503b;
+ line-height:1;font-family:Georgia,"Times New Roman",serif;
+}
+.label{font-size:clamp(8px,1.6vw,14px);letter-spacing:1.4px}
+.num{font-size:clamp(27px,5.5vw,48px);margin:7px 0}
+.unit{font-size:clamp(8px,1.45vw,13px)}
+.link{
+ position:absolute;z-index:10;display:block;
+ -webkit-tap-highlight-color:transparent;
+}
+.maps1{left:18.9%;top:79.88%;width:23.5%;height:2.25%}
+.maps2{left:57.5%;top:79.88%;width:24%;height:2.25%}
+.form{left:22.3%;top:91.55%;width:55%;height:2.65%}
+@media(max-width:500px){
+ .maps1{top:79.88%;height:2.35%}
+ .maps2{top:79.88%;height:2.35%}
+ .form{top:91.55%;height:2.8%}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<img class="base" src="invitacion-base-final.png" alt="Invitación de boda Magdalena y Bartolomé">
+
+<div class="countdown" aria-label="Cuenta atrás">
+  <div class="box"><span class="label">DÍAS</span><span class="num" id="days">0</span><span class="unit">DÍAS</span></div>
+  <div class="box"><span class="label">HORAS</span><span class="num" id="hours">00</span><span class="unit">HORAS</span></div>
+  <div class="box"><span class="label">MINUTOS</span><span class="num" id="minutes">00</span><span class="unit">MINUTOS</span></div>
+  <div class="box"><span class="label">SEGUNDOS</span><span class="num" id="seconds">00</span><span class="unit">SEGUNDOS</span></div>
+</div>
+
+<a class="link maps1" target="_blank" rel="noopener noreferrer"
+href="https://www.google.com/maps/search/?api=1&query=Parroquia%20Santa%20Catalina%2C%20Plaza%20de%20la%20Iglesia%209%2C%2014400%20Pozoblanco%2C%20C%C3%B3rdoba"
+aria-label="Google Maps ceremonia"></a>
+
+<a class="link maps2" target="_blank" rel="noopener noreferrer"
+href="https://www.google.com/maps/search/?api=1&query=Catering%20Calablanca%2C%20C%2F%20Cronista%20Sep%C3%BAlveda%207%2C%2014400%20Pozoblanco%2C%20C%C3%B3rdoba"
+aria-label="Google Maps celebración"></a>
+
+<a class="link form" target="_blank" rel="noopener noreferrer"
+href="https://docs.google.com/forms/d/e/1FAIpQLSezatcEja2CcOIFN9_i3sMrSfBncHwaiElb7RoRsyf85n1b3g/viewform?usp=header"
+aria-label="Formulario de confirmación"></a>
+</div>
+
+<script>
+const target=new Date("2027-10-30T13:00:00");
+function update(){
+ let d=Math.max(0,target-new Date());
+ document.getElementById("days").textContent=Math.floor(d/86400000);
+ document.getElementById("hours").textContent=String(Math.floor(d/3600000)%24).padStart(2,"0");
+ document.getElementById("minutes").textContent=String(Math.floor(d/60000)%60).padStart(2,"0");
+ document.getElementById("seconds").textContent=String(Math.floor(d/1000)%60).padStart(2,"0");
+}
+update();setInterval(update,1000);
+</script>
+</body>
+</html>
