@@ -1,0 +1,11 @@
+html,body{margin:0;height:100%;background:#111;overflow:hidden}
+#book{height:100%;display:flex;align-items:center;justify-content:center}
+.page{position:absolute;width:min(100vw,560px);height:100vh;overflow:hidden;display:none;background:#f5f0e6}
+.page.active{display:block}
+.page img{width:100%;height:100%;object-fit:cover;display:block}
+.hot{position:absolute;z-index:5;cursor:pointer;background:transparent;border:0}
+#seal{left:50%;top:50%;transform:translate(-50%,-50%);width:110px;height:110px;border-radius:50%}
+#open{position:absolute;inset:0;background:transparent;border:0;z-index:4}
+#music{position:fixed;right:16px;bottom:16px;width:42px;height:42px;border-radius:50%;background:#f5eee1cc;border:1px solid #b89a63;color:#6d644f;z-index:20;display:grid;place-items:center;font-family:Georgia;cursor:pointer}
+.nav{position:absolute;inset:0;z-index:3;display:flex}
+.nav button{flex:1;border:0;background:transparent}
