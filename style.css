@@ -1,0 +1,18 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#eee7da;color:#263021;font-family:Georgia,"Times New Roman",serif}
+main{width:100%;max-width:620px;margin:auto;background:#f6f0e5;box-shadow:0 0 35px rgba(60,45,25,.12)}
+.bar{position:fixed;top:12px;left:50%;transform:translateX(-50%);width:min(94%,600px);z-index:30;pointer-events:none}
+.monogram{pointer-events:auto;text-decoration:none;color:#33402d;background:rgba(246,240,229,.9);border:1px solid #b08a42;border-radius:30px;padding:8px 14px;font-size:16px;letter-spacing:4px;backdrop-filter:blur(5px)}
+.monogram span{color:#b08a42}
+.visual-section{position:relative;width:100%;overflow:hidden}
+.art{display:block;width:100%;height:auto}
+.quick{position:sticky;top:0;z-index:20;display:flex;gap:5px;justify-content:center;flex-wrap:wrap;padding:10px 7px;background:rgba(246,240,229,.96);border-top:1px solid rgba(176,138,66,.35);border-bottom:1px solid rgba(176,138,66,.35);backdrop-filter:blur(8px)}
+.quick a{color:#38402f;text-decoration:none;font-size:11px;letter-spacing:.25px;border:1px solid #b08a42;border-radius:18px;padding:7px 9px;background:#fbf7ef}
+.hotspot{position:absolute;display:block;background:transparent;border-radius:40px;cursor:pointer}
+.hotspot:focus-visible{outline:2px solid #b08a42;outline-offset:3px}
+.rsvp{left:17%;top:67%;width:66%;height:9%}
+.church{left:54%;top:39%;width:40%;height:9%}
+.salon{left:8%;top:66%;width:40%;height:9%}
+.song{left:17%;top:45%;width:66%;height:10%}
+@media(max-width:480px){.quick a{font-size:10px;padding:6px 7px}.monogram{font-size:14px}}
